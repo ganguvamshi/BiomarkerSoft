@@ -144,10 +144,10 @@ public class LinearRegression extends SimpleRegression{
 		}
 		else{
 			String Hgene = Ngenes[0].toString();
-			switch(Hgene){
-				case "HPRT1":
+			if(Hgene.equalsIgnoreCase("HPRT1")){
 					powerval = -(Thresholds.Eq_HPRT1_Constant + (Thresholds.Eq_HPRT1_AREG * a) + (Thresholds.Eq_HPRT1_TNFAIP3 * t) + (Thresholds.Eq_HPRT1_GIMAP5 * g));
-				case "GAPDH":
+			}
+			else if(Hgene.equalsIgnoreCase("GAPDH")){
 					powerval = -(Thresholds.Eq_GAPDH_Constant + (Thresholds.Eq_GAPDH_AREG * a) + (Thresholds.Eq_GAPDH_TNFAIP3 * t) + (Thresholds.Eq_GAPDH_GIMAP5 * g));
 			}
 		}
